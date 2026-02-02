@@ -12,7 +12,7 @@ export const Image: FC<Props> = ({ description, source, ...revealProps }) => {
     return getRevealAttributes(revealProps);
   }, [revealProps]);
 
-  return <img {...attributes} alt={description} src={source} />;
+  return <img {...attributes} alt={description} data-src={source} />;
 };
 
 export default Image;
