@@ -2,16 +2,29 @@
   "name": "reveal-react",
   "description": "A React wrapper for the RevealJS presentation library.",
   "version": "19.0.0",
-  "type": "module",
   "license": "MIT",
+  "type": "module",
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.es.js",
+  "types": "dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.cjs.js"
+    }
+  },
   "author": {
     "name": "Remi Taniel",
     "github": "https://github.com/Synthx"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Synthx/reveal-react"
+    "url": "git+https://github.com/Synthx/reveal-react.git"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "vite",
     "build": "tsc -b && vite build",
@@ -43,8 +56,5 @@
     "typescript-eslint": "^8.46.4",
     "vite": "npm:rolldown-vite@7.3.1",
     "vite-plugin-dts": "^4.5.4"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.3.1"
   }
 }
