@@ -5,33 +5,32 @@ A React wrapper for the RevealJS presentation library.
 ## Install
 
 ```bash
-npm install reveal-react
+npm install @iampinpin/revealjs-react
 ```
 
 ## Features
 
-- Lightweight, zero extra dependencies 📦
+- Lightweight, only one extra dependencies 📦
 - Tree-shakable 🌳 ESM and CommonJS support
 - Works with React v19 onwards
 
 ## Example
 
-```jsx
-import Tilt from "react-parallax-tilt";
+```tsx
+import type { FC } from "react";
+import { Bloc, Reveal, Slide } from "@iampinpin/revealjs-react";
 
-const App = () => {
+const App: FC = () => {
   return (
-    <Tilt>
-      <div style={{ height: "300px", backgroundColor: "darkgreen" }}>
-        <h1>React Parallax Tilt 👀</h1>
-      </div>
-    </Tilt>
+    <Reveal>
+      <Slide>
+        <Bloc.h1>Hello World</Bloc.h1>
+      </Slide>
+    </Reveal>
   );
 };
 ```
 
 ## Contributing
 
-All contributions are welcome!  
-Please review contribution
-guidelines: [Pull Requests](.github/pull_request_template.md) | [Issues](https://github.com/mkosir/react-parallax-tilt/issues/new/choose)
+All contributions are welcome!
